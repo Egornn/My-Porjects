@@ -1,0 +1,93 @@
+{%include "header.html"%}
+<embed id="pdfEmbed" src="static/files/Egor Nazdriukhin's Data Analyst.pdf" type="application/pdf" width="100%" height="600px" style='display:none'>
+
+
+
+<main role="main">
+  
+<section class="jumbotron text-center" style="margin-top: 30px; margin-bottom: 30px;">
+    <div class="container">
+      <h1 class="jumbotron-heading">Python Data &amp; Finance Analyst</h1>
+      <p class="lead text-muted">I work as a Data Analyst and looking for relevant opportunities in the UK.</p>
+      <h2 class="subtitle is-size-4-tablet "></h2><img class="avatar rounded-circle" width="220" height="220"  src="static/img/avatar.jpeg">
+    </div>
+  </section>
+  
+
+  <div class="album py-5 bg-light">
+    <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile text-center" style="margin-bottom: 20px;">My Recent Work</h1>
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Site for Recipes" alt="Thumbnail [100%x225]" src="static/img/thumb1.png" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+            <div class="card-body">
+              <p class="card-text">This is a website for sharing recipes. It has a user profile support, allows to upload your own recipes and uses Flask, SQLAlchemy and Bootstrap. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="https://tuntis.pythonanywhere.com/" class="btn btn-sm btn-outline-secondary">Visit</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="static/img/thumb2.png" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+            <div class="card-body">
+              <p class="card-text">Financial model to estimate excpected price and corresponding return on investment for Colgate-Palmolive ecommerce in Russia.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="https://www.colgate.com/en-gb" class="btn btn-sm btn-outline-secondary">Visit company</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="static/img/thumb3.png" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+            <div class="card-body">
+              <p class="card-text">This is an anlysis on house prices in Boston based on the number of parametres. The regression has a R-square of 0.7447 on the test subset.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="https://github.com/Egornn/100-Days-of-Python/blob/main/Advanced/Multivariable%20Regression%20(81)/Multivariable_Regression_and_Valuation_Model_(start).ipynb" class="btn btn-sm btn-outline-secondary">Visit</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>Made by ©Egor Nazdriukhin </p>
+
+    </div>
+  </footer>
+
+
+
+<script>
+    function showPDF() {
+      
+    var pdfEmbed = document.getElementById('pdfEmbed');
+    var link = document.querySelector('.nav-link');
+
+    if (pdfEmbed.style.display === 'none') {
+      pdfEmbed.style.display = 'block';
+      link.textContent = 'Hide CV';
+    } else {
+      pdfEmbed.style.display = 'none';
+      link.textContent = 'Show CV';
+    }
+  }
+  </script>
