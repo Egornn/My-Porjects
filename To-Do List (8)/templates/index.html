@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h1 class="mb-4">To Do List</h1>
+                <ul class="list-group">
+                    {% for task_id in range(todo_list|length) %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">{{ todo_list[task_id] }}
+                            <a href="/delete/{{ task_id }}" class="badge badge-danger">Complete&Remove</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <form action="/add" method="post" class="mt-4">
+                    <div class="input-group">
+                        <input type="text" name="task" class="form-control" placeholder="Add a Task" required>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
