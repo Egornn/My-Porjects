@@ -4,7 +4,7 @@ from collections import Counter
 
 def get_top_colors(file, num_colors=10):
     image = Image.open(file)
-    image = image.resize((200, 200))  # Размер изображения для ускорения обработки
+    image = image.resize((200, 200))  
     image = image.convert('RGB')
     image_array = np.array(image)
     image_array = image_array.reshape((image_array.shape[0] * image_array.shape[1], 3))
